@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Jurassic Park Review</string>
+    <string name="retour">Retour</string>
+    <string name="fermer">Fermer</string>
+    <string name="titre">Jurassic Park</string>
+    <string name="apropos">A PROPOS DU FILM</string>
 </resources>

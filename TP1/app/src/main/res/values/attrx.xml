@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Navbar">
+        <attr name="titre" format="string" />
+        <attr name="retour" format="string" />
+    </declare-styleable>
+</resources>
