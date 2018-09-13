@@ -5,4 +5,4 @@ La branche master contient les TP terminés et une branche existe pour chacun de
 
 ## Etat des TP :
 
-* TP1 : Fini (disponible sur la branche du même nom)
+* TP1 : Fini
