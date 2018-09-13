@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true" >
 
     <!--region NavBar-->
     <yannisbacha.polytech.fr.exercice1.Navbar
@@ -145,7 +146,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="30"
+                    android:layout_weight="33"
                     android:background="@drawable/special_button">
 
                     <ImageView
@@ -257,7 +258,6 @@
             android:layout_height="wrap_content"
             android:layout_width="0dp"
             android:textColorHint="@color/colorWhite"
-            android:backgroundTint="@color/colorWhite"
             android:hint="@string/ecrireComm"
             android:layout_weight="3"/>
 

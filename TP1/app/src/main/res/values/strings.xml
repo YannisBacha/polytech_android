@@ -12,8 +12,11 @@
     <string name="motscles">Mots clés</string>
     <string name="tagJurassic">Dinosaure, Jurassic, Park, 1993, Best movie ever</string>
     <string name="aimer">Aimer</string>
+    <string name="desaimer">Ne plus aimer</string>
     <string name="commenter">Commenter</string>
     <string name="partager">Partager</string>
     <string name="commentaires">Liste des commentaires</string>
-    <string name="ecrireComm">Un avis ?</string>
+    <string name="ecrireComm">Donner son avis</string>
+    <string name="home">Home</string>
+    <string name="details">Accéder aux détails du film</string>
 </resources>
