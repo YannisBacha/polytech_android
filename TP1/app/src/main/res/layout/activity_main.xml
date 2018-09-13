@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -16,7 +15,6 @@
 
     </yannisbacha.polytech.fr.exercice1.Navbar>
     <!--endregion-->
-
     <!--region ScrollSection-->
     <ScrollView
         android:layout_width="match_parent"
@@ -134,14 +132,143 @@
                     android:layout_weight="2"/>
             </LinearLayout>
             <!--endregion-->
-            <!-- Boutons -->
+            <!--region Boutons -->
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/colorAccent"
+                android:padding="20dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:id="@+id/btnPartager"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="30"
+                    android:background="@drawable/special_button">
 
+                    <ImageView
+                        android:id="@+id/btnPartagerImg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/partager" />
 
+                    <TextView
+                        android:id="@+id/btnPartagerText"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/partager"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/btnCommenter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="33"
+                    android:background="@drawable/special_button">
+
+                    <ImageView
+                        android:id="@+id/btnCommenterImg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/aimer" />
+
+                    <TextView
+                        android:id="@+id/btnCommenterText"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/commenter"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnAimer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="30"
+                    android:background="@drawable/special_button">
+
+                    <ImageView
+                        android:id="@+id/btnAimerImg"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/aimer" />
+
+                    <TextView
+                        android:id="@+id/btnAimerText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/aimer"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--endregion-->
+
+            <!-- Commentaire -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#a7a7a7">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/commentaires"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <!--endregion-->
+    <!--region Commenter -->
+    <LinearLayout
+        android:id="@+id/ecrireCommentaire"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/commentaireText"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:textColorHint="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"
+            android:hint="@string/ecrireComm"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/commentaireAction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/envoyer"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
     <!--endregion-->
 </RelativeLayout>

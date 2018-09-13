@@ -11,4 +11,9 @@
     <string name="descriptionJurassic">Ne pas réveiller le chat qui dort... C\'est ce que le milliardaire John Hammond aurait dû se rappeler avant de se lancer dans le \"clonage\" de dinosaures. C\'est à partir d\'une goutte de sang absorbée par un moustique fossilisé que John Hammond et son équipe ont réussi à faire renaître une dizaine d\'espèces de dinosaures. Il s\'apprête maintenant avec la complicité du docteur Alan Grant, paléontologue de renom, et de son amie Ellie, à ouvrir le plus grand parc à thème du monde. Mais c\'était sans compter la cupidité et la malveillance de l\'informaticien Dennis Nedry, et éventuellement des dinosaures, seuls maîtres sur l\'île...</string>
     <string name="motscles">Mots clés</string>
     <string name="tagJurassic">Dinosaure, Jurassic, Park, 1993, Best movie ever</string>
+    <string name="aimer">Aimer</string>
+    <string name="commenter">Commenter</string>
+    <string name="partager">Partager</string>
+    <string name="commentaires">Liste des commentaires</string>
+    <string name="ecrireComm">Un avis ?</string>
 </resources>
