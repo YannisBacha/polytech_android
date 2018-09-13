@@ -50,8 +50,7 @@ public class MovieReviewActivity extends AppCompatActivity {
         partagerLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MovieReviewActivity.this, "Pas la peine de partager," +
-                        " tout le monde sait que tu aimes ce film", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MovieReviewActivity.this, R.string.partagerAction, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -98,9 +97,9 @@ public class MovieReviewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MovieReviewActivity.this);
-                builder.setTitle("Votre commentaire à bien été envoyé :")
+                builder.setTitle(R.string.commMessage)
                        .setMessage(commentaireEditText.getText())
-                       .setPositiveButton("Fermer", new DialogInterface.OnClickListener() {
+                       .setPositiveButton(R.string.fermer, new DialogInterface.OnClickListener() {
                            public void onClick(DialogInterface dialog, int which) {
                                dialog.dismiss();
                            }

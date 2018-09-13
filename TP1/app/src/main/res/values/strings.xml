@@ -19,4 +19,6 @@
     <string name="ecrireComm">Donner son avis</string>
     <string name="home">Home</string>
     <string name="details">Accéder aux détails du film</string>
+    <string name="partagerAction">Pas la peine de partager, tout le monde sait que tu aimes ce film</string>
+    <string name="commMessage">Votre commentaire à bien été envoyé :</string>
 </resources>
