@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jurassic Park Review</string>
+    <string name="retour">Back</string>
+    <string name="fermer">Close</string>
+    <string name="titre">Jurassic Park</string>
+    <string name="apropos">ABOUT THE MOVIE</string>
+    <string name="titreFilm">Title</string>
+    <string name="titreJurassic">Jurassic Park</string>
+    <string name="titreFilmOrigine">Original Title</string>
+    <string name="description">Description</string>
+    <string name="descriptionJurassic">Industrialist John Hammond and his bioengineering company, InGen, have created a theme park featuring cloned dinosaurs and prehistoric plants, called Jurassic Park, on Isla Nublar, a Costa Rican island. After one of the dinosaur handlers is killed by a Velociraptor, the park\'s investors, represented by lawyer Donald Gennaro, demand that experts visit the park and certify it is safe. To perform the certification inspections, Gennaro invites mathematician and chaos theorist Ian Malcolm, while Hammond invites paleontologist Dr. Alan Grant and paleobotanist Dr. Ellie Sattler. Upon arrival, the group is shocked to see a live Brachiosaurus.</string>
+    <string name="motscles">Key Words</string>
+    <string name="tagJurassic">Dinosaur, Jurassic, Park, 1993, Best movie ever</string>
+    <string name="aimer">Like</string>
+    <string name="desaimer">Unlike</string>
+    <string name="commenter">Comment</string>
+    <string name="partager">Share</string>
+    <string name="commentaires">Comments list</string>
+    <string name="ecrireComm">Say something</string>
+    <string name="home">Home</string>
+    <string name="details">Access to the details of the film</string>
+    <string name="partagerAction">Don\'t need to share, everybody knows you love it</string>
+    <string name="commMessage">Your comment has been sent :</string>
+</resources>
