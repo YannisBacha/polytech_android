@@ -1,9 +1,9 @@
-package yannisbacha.polytech.fr.exercice2.Models;
+package yannisbacha.polytech.fr.exercice1.Models;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import yannisbacha.polytech.fr.exercice2.R;
+import yannisbacha.polytech.fr.exercice1.R;
 
 public class Comment {
     private Bitmap avatar;

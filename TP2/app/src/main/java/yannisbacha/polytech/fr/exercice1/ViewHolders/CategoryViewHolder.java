@@ -1,12 +1,12 @@
-package yannisbacha.polytech.fr.exercice2.ViewHolders;
+package yannisbacha.polytech.fr.exercice1.ViewHolders;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import yannisbacha.polytech.fr.exercice2.Models.Category;
-import yannisbacha.polytech.fr.exercice2.R;
+import yannisbacha.polytech.fr.exercice1.Models.Category;
+import yannisbacha.polytech.fr.exercice1.R;
 
 public class CategoryViewHolder extends RecyclerView.ViewHolder {
     private TextView name;

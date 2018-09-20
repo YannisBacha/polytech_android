@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice2.Models;
+package yannisbacha.polytech.fr.exercice1.Models;
 
 public class Category {
     private String name;

@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice2.Adapters;
+package yannisbacha.polytech.fr.exercice1.Adapters;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import yannisbacha.polytech.fr.exercice2.Models.Category;
-import yannisbacha.polytech.fr.exercice2.Models.MovieCard;
-import yannisbacha.polytech.fr.exercice2.R;
-import yannisbacha.polytech.fr.exercice2.ViewHolders.CategoryViewHolder;
-import yannisbacha.polytech.fr.exercice2.ViewHolders.ListingViewHolder;
+import yannisbacha.polytech.fr.exercice1.Models.Category;
+import yannisbacha.polytech.fr.exercice1.Models.MovieCard;
+import yannisbacha.polytech.fr.exercice1.R;
+import yannisbacha.polytech.fr.exercice1.ViewHolders.CategoryViewHolder;
+import yannisbacha.polytech.fr.exercice1.ViewHolders.ListingViewHolder;
 
 public class ListingAdapter extends RecyclerView.Adapter {
     private List<MovieCard> movieCards;

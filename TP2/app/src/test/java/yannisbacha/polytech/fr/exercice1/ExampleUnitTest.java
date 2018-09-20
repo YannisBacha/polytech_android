@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice2;
+package yannisbacha.polytech.fr.exercice1;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice2.Activities;
+package yannisbacha.polytech.fr.exercice1.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import yannisbacha.polytech.fr.exercice2.R;
+import yannisbacha.polytech.fr.exercice1.R;
 
 public class HomeActivity extends AppCompatActivity{
     private Button btnDetails;
@@ -18,7 +18,6 @@ public class HomeActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        btnDetails = findViewById(R.id.btnDetails);
         btnCategories = findViewById(R.id.btnCategories);
         btnCategories.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,10 +26,13 @@ public class HomeActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        btnDetails = findViewById(R.id.btnDetails);
         btnDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, MovieReviewActivity.class);
+                intent.putExtra("Title","Jurassic Park");
                 startActivity(intent);
             }
         });
