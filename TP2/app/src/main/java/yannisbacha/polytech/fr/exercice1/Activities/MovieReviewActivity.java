@@ -2,6 +2,13 @@ package yannisbacha.polytech.fr.exercice1.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,6 +41,10 @@ public class MovieReviewActivity extends AppCompatActivity implements IRecyclerV
     private List<Comment> comments;
     private int anonymous;
 
+    private TextView titre;
+    private TextView desc;
+    private ImageView image;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +68,8 @@ public class MovieReviewActivity extends AppCompatActivity implements IRecyclerV
                 backToHome();
             }
         });
+
+        affichage();
 
         // Gestion des boutons (Partager,Commenter,Aimer)
         LinearLayout partagerLinearLayout = findViewById(R.id.btnPartager);
@@ -128,7 +141,7 @@ public class MovieReviewActivity extends AppCompatActivity implements IRecyclerV
 
     // Retour à la page d'accueil
     private void backToHome() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, ListingActivity.class);
         startActivity(intent);
     }
 
@@ -160,5 +173,21 @@ public class MovieReviewActivity extends AppCompatActivity implements IRecyclerV
     @Override
     public List<Object> getObjects() {
         return new ArrayList<Object>(comments);
+    }
+
+    private void affichage() {
+        titre = findViewById(R.id.titre);
+        titre.setText(getIntent().getStringExtra("Titre"));
+        titre = findViewById(R.id.titreMovie);
+        titre.setText(getIntent().getStringExtra("Titre"));
+        titre = findViewById(R.id.titreMovie2);
+        titre.setText(getIntent().getStringExtra("Titre"));
+        desc = findViewById(R.id.description);
+        String[] descriptions = getIntent().getStringExtra("Description").split("Description : ");
+        desc.setText(descriptions[1]);
+
+        image = findViewById(R.id.imageMovie);
+        int imgRessource = getResources().getIdentifier(getIntent().getStringExtra("Image"), null,getApplicationContext().getPackageName());
+        image.setImageDrawable(getResources().getDrawable(imgRessource));
     }
 }

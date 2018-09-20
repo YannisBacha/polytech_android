@@ -1,6 +1,9 @@
 package yannisbacha.polytech.fr.exercice1.ViewHolders;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -9,6 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import java.io.ByteArrayOutputStream;
 
 import yannisbacha.polytech.fr.exercice1.Activities.ListingActivity;
 import yannisbacha.polytech.fr.exercice1.Activities.MovieReviewActivity;
@@ -32,10 +37,11 @@ public class MovieListingViewHolder extends RecyclerView.ViewHolder{
         movieDetailsLink = itemView.findViewById(R.id.movieDetailsLink);
     }
 
-    public void fillCard(MovieCard movieCard) {
+    public void fillCard(final MovieCard movieCard) {
         if (movieCard != null) {
             if (movieImg != null){
                 movieImg.setImageBitmap(movieCard.getImg());
+                movieImg.setTag(movieCard.getTag());
             }
             if (movieCardName != null){
                 movieCardName.setText(movieCard.getName());
@@ -44,11 +50,18 @@ public class MovieListingViewHolder extends RecyclerView.ViewHolder{
                 movieCardDescription.setText(movieCard.getDescription());
             }
             if (this.movieCard != null) {
+                // TODO : ??
                 this.movieCard.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
-                        /*Intent intent = new Intent();
-                        startActivity(intent);*/
+                    public void onClick(View view) {
+                        final Intent intent = new Intent(view.getContext(), MovieReviewActivity.class);
+                        intent.putExtra("Titre", movieCardName.getText());
+                        intent.putExtra("Description", movieCardDescription.getText());
+
+                        Drawable drawable = movieImg.getDrawable();
+                        String img = (String) movieImg.getTag();
+                        intent.putExtra("Image", "@drawable/"+img);
+                        view.getContext().startActivity(intent);
                     }
                 });
             }

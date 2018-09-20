@@ -32,7 +32,9 @@ public class HomeActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, MovieReviewActivity.class);
-                intent.putExtra("Title","Jurassic Park");
+                intent.putExtra("Titre","Jurassic Park");
+                intent.putExtra("Image", "@drawable/jurassic");
+                intent.putExtra("Description","Description : Ne pas réveiller le chat qui dort, c'est ce que le milliardaire John Hammond aurait dû se rappeler avant de se lancer dans le clonage de dinosaures. C'est à partir d'une goutte de sang absorbée par un moustique fossilisé que John Hammond et son équipe ont réussi à faire renaître une dizaine d'espèces de dinosaures.");
                 startActivity(intent);
             }
         });

@@ -1,5 +1,6 @@
 package yannisbacha.polytech.fr.exercice1.Models;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 
@@ -7,10 +8,12 @@ public class MovieCard extends MovieListingItem {
     private Bitmap img;
     private String name;
     private String description;
+    private String tag;
 
-    public MovieCard(Bitmap img, String name, String description) {
+    public MovieCard(Bitmap img, String name, String tag, String description) {
         this.img = img;
         this.name = name;
+        this.tag = tag;
         this.description = "Description : " + description;
     }
 
@@ -36,6 +39,14 @@ public class MovieCard extends MovieListingItem {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     @Override

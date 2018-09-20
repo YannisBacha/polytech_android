@@ -1,5 +1,7 @@
 package yannisbacha.polytech.fr.exercice1.Adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Movie;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import yannisbacha.polytech.fr.exercice1.Activities.ListingActivity;
+import yannisbacha.polytech.fr.exercice1.Activities.MovieReviewActivity;
 import yannisbacha.polytech.fr.exercice1.Models.Alphabet;
 import yannisbacha.polytech.fr.exercice1.Models.MovieCard;
 import yannisbacha.polytech.fr.exercice1.Models.MovieCounter;
@@ -17,10 +20,14 @@ import yannisbacha.polytech.fr.exercice1.ViewHolders.MovieCounterListingViewHold
 import yannisbacha.polytech.fr.exercice1.ViewHolders.MovieListingViewHolder;
 
 public class ListingAdapter extends MainAdapter {
-
+    private Context context;
     public final static int ALPHABET_ROW_ID = 0;
     public final static int MOVIE_CARD_ROW_ID = 1;
     public final static int COUNTER_ROW_ID = 2;
+
+    public ListingAdapter(Context context) {
+        this.context = context;
+    }
 
     @NonNull
     @Override

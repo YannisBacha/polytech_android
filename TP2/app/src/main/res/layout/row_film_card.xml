@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimaryDark"
     android:clickable="true"
+    tools:context=".Activities.ListingActivity"
     android:id="@+id/movieCard">
 
     <LinearLayout
@@ -38,7 +40,10 @@
             <TextView
                 android:id="@+id/movieCardDescription"
                 android:layout_width="match_parent"
-                android:layout_height="70dp" />
+                android:layout_height="70dp"
+                android:lines="3"
+                android:scrollHorizontally="true"
+                android:ellipsize="end"/>
         </LinearLayout>
 
 
