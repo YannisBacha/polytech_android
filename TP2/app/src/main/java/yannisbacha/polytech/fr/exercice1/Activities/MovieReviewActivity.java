@@ -1,9 +1,8 @@
 package yannisbacha.polytech.fr.exercice1.Activities;
 
-import android.content.DialogInterface;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,12 +16,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import yannisbacha.polytech.fr.exercice1.Adapters.CategoryAdapter;
+import java.util.ArrayList;
+import java.util.List;
+
 import yannisbacha.polytech.fr.exercice1.Adapters.CommentAdapter;
 import yannisbacha.polytech.fr.exercice1.Models.Comment;
 import yannisbacha.polytech.fr.exercice1.R;
 
-public class MovieReviewActivity extends AppCompatActivity {
+public class MovieReviewActivity extends AppCompatActivity implements IRecyclerViewManager{
     private EditText commentaireEditText;
     private boolean flagAimer;
     private LinearLayout aimerLinearLayout;
@@ -30,11 +31,15 @@ public class MovieReviewActivity extends AppCompatActivity {
     private TextView aimerTextView;
     private RecyclerView commentRecyclerView;
     private CommentAdapter ca;
+    private List<Comment> comments;
+    private int anonymous;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_moviereview);
+        createComments();
+        anonymous = 1;
 
         // Gestion de la NavBar
         ImageButton closeButton = findViewById(R.id.closeButton);
@@ -86,7 +91,7 @@ public class MovieReviewActivity extends AppCompatActivity {
                 if(flagAimer) {
                     aimerLinearLayout.setBackgroundResource(R.drawable.special_button);
                     aimerTextView.setText(R.string.aimer);
-                    //aimerTextView.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                    aimerTextView.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
                     aimerImgView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.aimer));
                 }
                 else {
@@ -101,7 +106,8 @@ public class MovieReviewActivity extends AppCompatActivity {
 
 
         commentRecyclerView = findViewById(R.id.commentsRV);
-        ca = new CommentAdapter(this);
+        ca = new CommentAdapter();
+        ca.setViewManager(this);
         commentRecyclerView.setAdapter(ca);
         commentRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -111,15 +117,13 @@ public class MovieReviewActivity extends AppCompatActivity {
         envoyerImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ca.addComment(new Comment("Anonyme", commentaireEditText.getText().toString(), ca.getCnt()));
+                addComment();
                 commentRecyclerView.scrollToPosition(ca.getItemCount()-1);
                 commentaireEditText.setText("");
                 InputMethodManager imm = (InputMethodManager) getSystemService(getApplicationContext().INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
             }
         });
-
-
     }
 
     // Retour à la page d'accueil
@@ -128,4 +132,33 @@ public class MovieReviewActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void createComments() {
+        Context cnt = this;
+        comments = new ArrayList<Comment>();
+        comments.add(new Comment("Hysttos", "Superbe film <3", cnt));
+        comments.add(new Comment("Hartyshow", "J'ai pas vu le film", cnt));
+        comments.add(new Comment("Habrycot", "Je me suis endormi devant", cnt));
+        comments.add(new Comment("Ato ", "J'ai dépensé sans compter", cnt));
+        comments.add(new Comment("Hysttoria", "Superbe film <3", cnt));
+        comments.add(new Comment("Gaëtan", "Superbe fdhzqduomqhfuekfhuheufhmofhihdoimehvusfhblfnleshqziljeslfhimqhiqz" +
+                "bzjkdmzhqudqzl:dhquzdlmqzhdumodz \n zudiqzldgzuqidgqzukdlqzdqidludklqzhdiqzuomdhqzildzhq:dilqzdhmqlzilm <3", cnt));
+        comments.add(new Comment("Alexandre", "J'ai pas vu le film", cnt));
+        comments.add(new Comment("Pierre", "Superbe référence cinématographique", cnt));
+    }
+
+    public void addComment() {
+        this.comments.add(new Comment("Anonyme " + anonymous, commentaireEditText.getText().toString(), this));
+        ca.notifyItemInserted(this.getItemCount() -1);
+        anonymous++;
+    }
+
+    @Override
+    public int getItemCount() {
+        return comments.size();
+    }
+
+    @Override
+    public List<Object> getObjects() {
+        return new ArrayList<Object>(comments);
+    }
 }

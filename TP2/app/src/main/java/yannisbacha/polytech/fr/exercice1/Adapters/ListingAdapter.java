@@ -17,13 +17,7 @@ import yannisbacha.polytech.fr.exercice1.R;
 import yannisbacha.polytech.fr.exercice1.ViewHolders.CategoryViewHolder;
 import yannisbacha.polytech.fr.exercice1.ViewHolders.ListingViewHolder;
 
-public class ListingAdapter extends RecyclerView.Adapter {
-    private List<MovieCard> movieCards;
-
-    public ListingAdapter(Context cnt) {
-        this.createListing(cnt);
-    }
-
+public class ListingAdapter extends MainAdapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
@@ -34,37 +28,10 @@ public class ListingAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-        MovieCard card = movieCards.get(i);
+        MovieCard card = (MovieCard) getViewManager().getObjects().get(i);
         if(viewHolder instanceof ListingViewHolder && card != null) {
             ListingViewHolder lvh = (ListingViewHolder) viewHolder;
             lvh.fillCard(card);
         }
-    }
-
-    @Override
-    public int getItemCount() {
-        if(movieCards != null)
-            return movieCards.size();
-        return 0;
-    }
-
-    public void createListing(Context cnt) {
-        movieCards = new ArrayList<MovieCard>();
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
     }
 }

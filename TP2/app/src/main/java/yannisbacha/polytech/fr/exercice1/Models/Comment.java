@@ -1,8 +1,11 @@
 package yannisbacha.polytech.fr.exercice1.Models;
 
+import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
+import yannisbacha.polytech.fr.exercice1.Activities.HomeActivity;
 import yannisbacha.polytech.fr.exercice1.R;
 
 public class Comment {
