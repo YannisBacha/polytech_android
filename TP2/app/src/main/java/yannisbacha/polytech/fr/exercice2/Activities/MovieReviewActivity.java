@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice1.Activities;
+package yannisbacha.polytech.fr.exercice2.Activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,10 +17,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import yannisbacha.polytech.fr.exercice1.Adapters.CategoryAdapter;
-import yannisbacha.polytech.fr.exercice1.Adapters.CommentAdapter;
-import yannisbacha.polytech.fr.exercice1.Models.Comment;
-import yannisbacha.polytech.fr.exercice1.R;
+import yannisbacha.polytech.fr.exercice2.Adapters.CategoryAdapter;
+import yannisbacha.polytech.fr.exercice2.Adapters.CommentAdapter;
+import yannisbacha.polytech.fr.exercice2.Models.Comment;
+import yannisbacha.polytech.fr.exercice2.R;
 
 public class MovieReviewActivity extends AppCompatActivity {
     private EditText commentaireEditText;

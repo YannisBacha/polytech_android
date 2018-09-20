@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice1.ViewHolders;
+package yannisbacha.polytech.fr.exercice2.ViewHolders;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,10 +9,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import yannisbacha.polytech.fr.exercice1.Activities.HomeActivity;
-import yannisbacha.polytech.fr.exercice1.Models.Category;
-import yannisbacha.polytech.fr.exercice1.Models.MovieCard;
-import yannisbacha.polytech.fr.exercice1.R;
+import yannisbacha.polytech.fr.exercice2.Activities.HomeActivity;
+import yannisbacha.polytech.fr.exercice2.Models.Category;
+import yannisbacha.polytech.fr.exercice2.Models.MovieCard;
+import yannisbacha.polytech.fr.exercice2.R;
 
 public class ListingViewHolder extends RecyclerView.ViewHolder {
     private RelativeLayout movieCard;

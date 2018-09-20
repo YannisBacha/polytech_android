@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice1.Models;
+package yannisbacha.polytech.fr.exercice2.Models;
 
 import android.graphics.Bitmap;
 

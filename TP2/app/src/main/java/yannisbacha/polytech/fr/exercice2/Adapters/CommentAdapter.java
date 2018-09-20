@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice1.Adapters;
+package yannisbacha.polytech.fr.exercice2.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import yannisbacha.polytech.fr.exercice1.Models.Comment;
-import yannisbacha.polytech.fr.exercice1.R;
-import yannisbacha.polytech.fr.exercice1.ViewHolders.CommentViewHolder;
+import yannisbacha.polytech.fr.exercice2.Models.Comment;
+import yannisbacha.polytech.fr.exercice2.R;
+import yannisbacha.polytech.fr.exercice2.ViewHolders.CommentViewHolder;
 
 public class CommentAdapter extends RecyclerView.Adapter {
     private List<Comment> comments;

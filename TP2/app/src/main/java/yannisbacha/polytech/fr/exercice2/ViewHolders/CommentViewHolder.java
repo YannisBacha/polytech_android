@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice1.ViewHolders;
+package yannisbacha.polytech.fr.exercice2.ViewHolders;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import yannisbacha.polytech.fr.exercice1.Models.Category;
-import yannisbacha.polytech.fr.exercice1.Models.Comment;
-import yannisbacha.polytech.fr.exercice1.R;
+import yannisbacha.polytech.fr.exercice2.Models.Category;
+import yannisbacha.polytech.fr.exercice2.Models.Comment;
+import yannisbacha.polytech.fr.exercice2.R;
 
 public class CommentViewHolder extends RecyclerView.ViewHolder {
     private TextView username;

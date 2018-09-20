@@ -4,14 +4,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <yannisbacha.polytech.fr.exercice1.Navbar
+    <yannisbacha.polytech.fr.exercice2.Navbar
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:retour="@string/retour"
         app:titre="@string/titreListing">
 
-    </yannisbacha.polytech.fr.exercice1.Navbar>
+    </yannisbacha.polytech.fr.exercice2.Navbar>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listingRV"

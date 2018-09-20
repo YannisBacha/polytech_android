@@ -7,14 +7,14 @@
     android:focusableInTouchMode="true" >
 
     <!--region NavBar-->
-    <yannisbacha.polytech.fr.exercice1.Navbar
+    <yannisbacha.polytech.fr.exercice2.Navbar
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:retour="@string/retour"
         app:titre="@string/titre">
 
-    </yannisbacha.polytech.fr.exercice1.Navbar>
+    </yannisbacha.polytech.fr.exercice2.Navbar>
     <!--endregion-->
     <!--region ScrollSection-->
     <ScrollView

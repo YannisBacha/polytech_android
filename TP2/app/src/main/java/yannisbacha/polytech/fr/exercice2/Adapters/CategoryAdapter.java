@@ -1,4 +1,4 @@
-package yannisbacha.polytech.fr.exercice1.Adapters;
+package yannisbacha.polytech.fr.exercice2.Adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import yannisbacha.polytech.fr.exercice1.Models.Category;
-import yannisbacha.polytech.fr.exercice1.R;
-import yannisbacha.polytech.fr.exercice1.ViewHolders.CategoryViewHolder;
+import yannisbacha.polytech.fr.exercice2.Models.Category;
+import yannisbacha.polytech.fr.exercice2.R;
+import yannisbacha.polytech.fr.exercice2.ViewHolders.CategoryViewHolder;
 
 public class CategoryAdapter extends RecyclerView.Adapter {
     private List<Category> categories;
