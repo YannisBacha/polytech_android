@@ -1,8 +1,9 @@
 package yannisbacha.polytech.fr.exercice1.Models;
 
 import android.graphics.Bitmap;
+import android.support.annotation.NonNull;
 
-public class MovieCard {
+public class MovieCard extends MovieListingItem {
     private Bitmap img;
     private String name;
     private String description;
@@ -35,5 +36,10 @@ public class MovieCard {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public int compareTo(@NonNull MovieListingItem o) {
+        return this.getName().substring(0,1).toLowerCase().compareTo(((MovieCard) o).getName().substring(0,1).toLowerCase());
     }
 }

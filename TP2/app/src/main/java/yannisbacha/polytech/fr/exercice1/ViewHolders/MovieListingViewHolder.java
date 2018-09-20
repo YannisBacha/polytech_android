@@ -11,14 +11,14 @@ import android.widget.TextView;
 import yannisbacha.polytech.fr.exercice1.Models.MovieCard;
 import yannisbacha.polytech.fr.exercice1.R;
 
-public class ListingViewHolder extends RecyclerView.ViewHolder {
+public class MovieListingViewHolder extends RecyclerView.ViewHolder {
     private RelativeLayout movieCard;
     private ImageView movieImg;
     private TextView movieCardName;
     private TextView movieCardDescription;
     private ImageView movieDetailsLink;
 
-    public ListingViewHolder(@NonNull View itemView) {
+    public MovieListingViewHolder(@NonNull View itemView) {
         super(itemView);
 
         movieCard = itemView.findViewById(R.id.movieCard);

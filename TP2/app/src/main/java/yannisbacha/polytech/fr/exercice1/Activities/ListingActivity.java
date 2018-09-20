@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,21 +13,26 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import yannisbacha.polytech.fr.exercice1.Adapters.ListingAdapter;
+import yannisbacha.polytech.fr.exercice1.Models.Alphabet;
 import yannisbacha.polytech.fr.exercice1.Models.MovieCard;
+import yannisbacha.polytech.fr.exercice1.Models.MovieCounter;
+import yannisbacha.polytech.fr.exercice1.Models.MovieListingItem;
 import yannisbacha.polytech.fr.exercice1.R;
 
-public class ListingActivity extends AppCompatActivity implements IRecyclerViewManager{
+public class ListingActivity extends AppCompatActivity implements IRecyclerViewManager {
     private RecyclerView listingRecyclerView;
-    private List<MovieCard> movieCards;
+    public static List<MovieListingItem> movieListingItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listing);
         createListing();
+        organiseListing();
 
         // Gestion de la NavBar
         ImageButton closeButton = findViewById(R.id.closeButton);
@@ -62,32 +68,61 @@ public class ListingActivity extends AppCompatActivity implements IRecyclerViewM
 
     public void createListing() {
         Context cnt = this;
-        movieCards = new ArrayList<MovieCard>();
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
-        movieCards.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems = new ArrayList<>();
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Aurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Lurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Burassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Burassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "JLurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Curassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Hurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Lurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+        movieListingItems.add(new MovieCard(BitmapFactory.decodeResource(cnt.getResources(), R.mipmap.jurassic), "Jurassic", "balbalbalbalbalabalbalbalabl blab l bla bl abal bal balbalblablabla bl bl"));
+    }
+
+    private void organiseListing() {
+        Collections.sort(movieListingItems);
+
+        ArrayList<MovieListingItem> movieListingItemsFinal = new ArrayList<>();
+        String currentLetter = null;
+        int movieCounter = 0;
+
+        for (MovieListingItem movie : movieListingItems) {
+            if (currentLetter != null) {
+                if (!((MovieCard) movie).getName().toLowerCase().substring(0,1).equals(currentLetter)) {
+                    currentLetter = ((MovieCard) movie).getName().toLowerCase().substring(0,1);
+                    movieListingItemsFinal.add(new MovieCounter(movieCounter + ""));
+                    movieCounter = 0;
+                    movieListingItemsFinal.add(new Alphabet(currentLetter));
+                }
+            }
+            else {
+                currentLetter = "a";
+                movieListingItemsFinal.add(new Alphabet(currentLetter));
+            }
+
+            movieListingItemsFinal.add((MovieCard) movie);
+            movieCounter++;
+        }
+
+        movieListingItems = movieListingItemsFinal;
+
     }
 
     @Override
     public int getItemCount() {
-        return movieCards.size();
+        return movieListingItems.size();
     }
 
     @Override
     public List<Object> getObjects() {
-        return new ArrayList<Object>(movieCards);
+        return new ArrayList<Object>(movieListingItems);
     }
 }

@@ -1,6 +1,8 @@
 package yannisbacha.polytech.fr.exercice1.Models;
 
-public class Alphabet {
+import android.support.annotation.NonNull;
+
+public class Alphabet extends MovieListingItem {
     private String letter;
 
     public Alphabet(String letter) {
@@ -13,5 +15,10 @@ public class Alphabet {
 
     public void setLetter(String letter) {
         this.letter = letter;
+    }
+
+    @Override
+    public int compareTo(@NonNull MovieListingItem o) {
+        return 0;
     }
 }
