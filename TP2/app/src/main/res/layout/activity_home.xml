@@ -27,9 +27,9 @@
             android:id="@+id/btnDetails"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/details"
-            android:textColor="@color/colorPrimaryDark"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:textColor="@color/colorPrimaryDark" />
 
         <Button
             android:id="@+id/btnCategories"
@@ -47,5 +47,14 @@
             android:backgroundTint="@color/colorPrimary"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
+        android:text="@string/copyright"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
 
 </LinearLayout>

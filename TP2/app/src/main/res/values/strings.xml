@@ -25,4 +25,5 @@
     <string name="categories">Accéder à la liste des Catégories</string>
     <string name="titreListing">Liste des films</string>
     <string name="listing">Accéder à la liste des films</string>
+    <string name="copyright"><![CDATA[Yannis BACHA & Alexandre FRAZER]]></string>
 </resources>
