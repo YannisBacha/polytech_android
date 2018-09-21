@@ -10,7 +10,7 @@
     <yannisbacha.polytech.fr.exercice1.Navbar
         android:id="@+id/navbar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         app:retour="@string/retour"
         app:titre="@string/titre">
 
@@ -142,7 +142,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:background="@color/colorAccent"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:weightSum="100">
                 <LinearLayout
                     android:id="@+id/btnPartager"
@@ -176,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center"
-                    android:layout_weight="33"
+                    android:layout_weight="36"
                     android:background="@drawable/special_button">
 
                     <ImageView
@@ -184,7 +184,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_width="15dp"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/aimer" />
+                        android:src="@drawable/commenter" />
 
                     <TextView
                         android:id="@+id/btnCommenterText"

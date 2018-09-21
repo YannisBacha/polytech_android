@@ -51,6 +51,6 @@ public class MovieCard extends MovieListingItem {
 
     @Override
     public int compareTo(@NonNull MovieListingItem o) {
-        return this.getName().substring(0,1).toLowerCase().compareTo(((MovieCard) o).getName().substring(0,1).toLowerCase());
+        return this.getName().toLowerCase().compareTo(((MovieCard) o).getName().toLowerCase());
     }
 }

@@ -1,57 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:background="@color/colorAccent">
 
     <LinearLayout
         android:id="@+id/backButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <ImageButton
             android:layout_height="20dp"
             android:layout_width="20dp"
             android:src="@mipmap/back"
             android:contentDescription="@string/retour"
-            android:background="@android:color/transparent"
-            />
+            android:background="@android:color/transparent"/>
+
         <TextView
             android:id="@+id/retour"
             android:text="@string/retour"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:textColor="@color/colorPrimary"
-            android:textAllCaps="false"
-            />
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/titre"
-        android:text="Page title"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10">
 
-    <ImageButton
-        android:id="@+id/closeButton"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:src="@mipmap/fermer"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="10dp"
-        android:contentDescription="@string/fermer"
-        android:background="@android:color/transparent"
-        />
+        <TextView
+            android:id="@+id/titre"
+            android:text="Page title"
+            android:layout_weight="10"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
-</RelativeLayout>
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/fermer"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/fermer"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</LinearLayout>
