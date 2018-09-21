@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jurassic Park Review</string>
+    <string name="app_name">Movie Review</string>
     <string name="retour">Retour</string>
     <string name="fermer">Fermer</string>
     <string name="titre">Jurassic Park</string>
@@ -18,11 +18,11 @@
     <string name="commentaires">Liste des commentaires</string>
     <string name="ecrireComm">Donner son avis</string>
     <string name="home">Home</string>
-    <string name="details">Accéder aux détails du film</string>
+    <string name="details">Jurassic Park Review</string>
     <string name="partagerAction">Pas la peine de partager, tout le monde sait que tu aimes ce film</string>
     <string name="commMessage">Votre commentaire à bien été envoyé :</string>
     <string name="titreNavCat">Categories</string>
-    <string name="categories">Accéder à la liste des Catégories</string>
+    <string name="categories">Liste des Catégories</string>
     <string name="titreListing">Liste des films</string>
     <string name="listing">Accéder à la liste des films</string>
     <string name="copyright"><![CDATA[Yannis BACHA & Alexandre FRAZER]]></string>
