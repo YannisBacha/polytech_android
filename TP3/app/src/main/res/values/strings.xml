@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Movie Review</string>
+    <string name="retour">Retour</string>
+    <string name="fermer">Fermer</string>
+    <string name="titre">Jurassic Park</string>
+    <string name="apropos">A PROPOS DU FILM</string>
+    <string name="titreFilm">Titre</string>
+    <string name="titreFilmOrigine">Titre d\'origine</string>
+    <string name="description">Description</string>
+    <string name="motscles">Mots clés</string>
+    <string name="tagJurassic">XOXOXOXOXO</string>
+    <string name="aimer">Aimer</string>
+    <string name="desaimer">Ne plus aimer</string>
+    <string name="commenter">Commenter</string>
+    <string name="partager">Partager</string>
+    <string name="commentaires">Liste des commentaires</string>
+    <string name="ecrireComm">Donner son avis</string>
+    <string name="home">Liste des Films</string>
+    <string name="partagerAction">Pas la peine de partager, tout le monde sait que tu aimes ce film</string>
+    <string name="titreNavCat">Categories</string>
+    <string name="categories">Liste des Catégories</string>
+    <string name="titreListing">Liste des films</string>
+    <string name="listing">Accéder à la liste des films</string>
+</resources>

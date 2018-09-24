@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true" >
+
+    <!--region NavBar-->
+    <yannisbacha.polytech.fr.exercice1.Navbar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:retour="@string/retour"
+        app:titre="@string/titre">
+
+    </yannisbacha.polytech.fr.exercice1.Navbar>
+    <!--endregion-->
+    <!--region ScrollSection-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+        <LinearLayout
+            android:id="@+id/layout01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@id/title">
+
+            <!-- Image -->
+            <ImageView
+                android:id="@+id/imageMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/spider" />
+            <!-- A Propos -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:text="@string/apropos"
+                android:adjustViewBounds="true"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+            <!--region Tableau descriptif -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/titreFilm"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/titreMovie"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/titreJurassic"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/titreFilmOrigine"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/titreMovie2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/titreJurassic"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/description"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/descriptionJurassic"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/motscles"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/tagJurassic"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <!--endregion-->
+            <!--region Boutons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/colorAccent"
+                android:padding="15dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:id="@+id/btnPartager"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="33"
+                    android:background="@drawable/special_button">
+
+                    <ImageView
+                        android:id="@+id/btnPartagerImg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/partager" />
+
+                    <TextView
+                        android:id="@+id/btnPartagerText"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/partager"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/btnCommenter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="36"
+                    android:background="@drawable/special_button">
+
+                    <ImageView
+                        android:id="@+id/btnCommenterImg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/commenter" />
+
+                    <TextView
+                        android:id="@+id/btnCommenterText"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/commenter"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnAimer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="30"
+                    android:background="@drawable/special_button">
+
+                    <ImageView
+                        android:id="@+id/btnAimerImg"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/aimer" />
+
+                    <TextView
+                        android:id="@+id/btnAimerText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/aimer"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--endregion-->
+
+            <!-- Commentaire -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/commentsRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="60dp">
+                </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+    <!--endregion-->
+    <!--region Commenter -->
+    <LinearLayout
+        android:id="@+id/ecrireCommentaire"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:gravity="center|bottom"
+        android:padding="10dp"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/commentaireText"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:textColorHint="#ffffff"
+            android:hint="@string/ecrireComm"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/commentaireAction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/envoyer"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+    <!--endregion-->
+</RelativeLayout>
