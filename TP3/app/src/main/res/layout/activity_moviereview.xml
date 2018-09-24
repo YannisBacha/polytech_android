@@ -59,6 +59,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textStyle="bold"
                     android:text="@string/titreFilm"
                     android:textColor="@color/colorPrimary"
                     android:layout_weight="1"/>
@@ -81,6 +82,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textStyle="bold"
                     android:text="@string/titreFilmOrigine"
                     android:textColor="@color/colorPrimary"
                     android:layout_weight="1"/>
@@ -104,6 +106,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="@string/description"
+                    android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
                     android:layout_weight="1"/>
                 <TextView
@@ -127,6 +130,7 @@
                     android:layout_height="match_parent"
                     android:text="@string/motscles"
                     android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
                     android:layout_weight="1"/>
                 <TextView
                     android:layout_width="0dp"
